@@ -1,0 +1,13 @@
+body, html {
+    min-height: 100%;
+}
+
+body {
+    background-color: #D8572A;
+}
+
+.color-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

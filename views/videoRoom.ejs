@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/public/css/videoRoom.css">
+
+	<title>V-tube</title>
+</head>
+
+<body>
+	<div class="fpage bg-primary">
+		<div id="player"></div>
+		<div class="btn-group btn-group-lg mt-5" role="group">
+			<button type="button" onclick="playVideo()" class="btn btn-secondary video-controls" disabled>Play</button>
+			<button type="button" onclick="pauseVideo()" class="btn btn-secondary video-controls" disabled>Pause</button>
+			<button type="button" onclick="syncVideo()" class="btn btn-secondary video-controls" disabled>Sync</button>
+		</div>
+	</div>
+
+	<!-- custom -->
+	<script>
+		const roomID = '<%= roomID %>';
+		window.room = { videoID: '<%= room.videoID %>' };
+	</script>
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script src="/public/js/videoRoom.js"></script>
+</body>
+
+</html>
